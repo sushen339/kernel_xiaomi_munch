@@ -59,7 +59,7 @@ export DEF_ARGS="O=${OUT} \
             LD=ld.lld "
 export BUILD_ARGS="-j${TH_COUNT} ${DEF_ARGS}"
 
-# make menuconfig CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LD=ld.lld LLVM=1 BUILD_INITRAMFS=1
+# make menuconfig CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LLVM=1 LD=ld.lld
 
 echo -e "${cwarn}内核工作目录 ==> ${KERNEL_DIR}"
 echo -e "内核 defconfig 文件 ==> ${KERNEL_DEFCONFIG}"
