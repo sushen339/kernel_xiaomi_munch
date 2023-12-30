@@ -22,7 +22,7 @@ export OUT=out
 # anykernel3 目录
 export ANYKERNEL3=${KERNEL_DIR}/AnyKernel
 # 内核 zip 刷机包名称
-export KERNEL_ZIP_NAME="munch_ape.zip"
+export KERNEL_ZIP_NAME="munch_kernel.zip"
 # 刷机包打包完成后移动目录
 export KERNEL_ZIP_EXPORT=$HOME/Kernel
 # 设置 clang 绝对路径
