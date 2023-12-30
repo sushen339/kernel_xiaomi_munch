@@ -128,10 +128,10 @@ echo -e "${cinfo}=============== 编译 defconfig ===============${cno}"
 # make defconfig
 if [ -e out/.config ]; then
     echo "${cwarn}.config 文件已存在。${cno}"
-    read -p "是否清理后编译? (y/n)[n]: " choice
+    read -p "是否跳过清理? (y/n)[y]: " choice
 
     # 判断用户的选择
-    if [[ "$choice" =~ ^[Yy]$ ]]; then
+    if [[ "$choice" =~ ^[Nn]$ ]]; then
         echo "${cwarn}开始清理 ...${cno}"
         (cd out && make clean && make distclean)
         rm -rf out
