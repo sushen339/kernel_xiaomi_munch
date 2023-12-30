@@ -56,6 +56,12 @@ export DEF_ARGS="O=${OUT} \
             CXX="\${CX}" \
             CROSS_COMPILE=aarch64-linux-gnu- \
             CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
+            AS=llvm-as \
+            AR=llvm-ar \
+            NM=llvm-nm \
+            OBJCOPY=llvm-objcopy \
+            OBJDUMP=llvm-objdump \
+            STRIP=llvm-strip \
             LD=ld.lld "
 export BUILD_ARGS="-j${TH_COUNT} ${DEF_ARGS}"
 
