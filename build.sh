@@ -183,7 +183,7 @@ if [[ "$?" -ne 0 ]]; then
     echo -e "${cerror}>>> 编译内核错误，停止编译!${cno}"
     exit 1
 fi
-echo -e "${cwarn}>>> 内核编译成功!${cno}"
+echo -e "${cwarn}>>> 内核编译成功! <<<${cno}"
 
 
 # 记录编译用时
