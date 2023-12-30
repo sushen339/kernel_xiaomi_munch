@@ -38,7 +38,6 @@ export CX='ccache clang++'
 # 设置ccache路径
 export CCACHE_DIR=$HOME/.cache/ccache
 # 其它参数
-export LLVM=1
 export BUILD_INITRAMFS=1
 
 
@@ -56,12 +55,7 @@ export DEF_ARGS="O=${OUT} \
             CXX="\${CX}" \
             CROSS_COMPILE=aarch64-linux-gnu- \
             CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
-            AR=llvm-as \
-            AS=llvm-ar \
-            NM=llvm-nm \
-            OBJCOPY=llvm-objcopy \
-            OBJDUMP=llvm-objdump \
-            STRIP=llvm-strip \
+            LLVM=1 \
             LD=ld.lld "
 export BUILD_ARGS="-j${TH_COUNT} ${DEF_ARGS}"
 
