@@ -51,6 +51,7 @@ module_param_named(
 #define MONITOR_WORK_10S	10
 #define MONITOR_WORK_5S		5
 #define MONITOR_WORK_2S		2
+#define MONITOR_WORK_1S		1
 
 #define FG_FLAGS_FD				BIT(4)
 #define	FG_FLAGS_FC				BIT(5)
@@ -2826,7 +2827,7 @@ static void fg_monitor_workfunc(struct work_struct *work)
 	}
 	if (!bq->usb_in) {
 		if (bq->plugout_update_count >= 4) {
-			period = MONITOR_WORK_10S*2;
+			period = MONITOR_WORK_1S;
 		} else {
 			period = MONITOR_WORK_2S;
 			bq->plugout_update_count++;
