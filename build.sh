@@ -37,7 +37,7 @@ export C='ccache clang'
 export CX='ccache clang++'
 # 设置ccache路径
 export CCACHE_DIR=$HOME/.cache/ccache
-# 其它参数
+# 使用clang编译需要配置
 export BUILD_INITRAMFS=1
 
 
