@@ -26,7 +26,7 @@ export KERNEL_ZIP_NAME="munch_kernel.zip"
 # 刷机包打包完成后移动目录
 export KERNEL_ZIP_EXPORT=$HOME/Kernel
 # 设置 clang 绝对路径
-export CLANG_PATH=$HOME/Kernel/toolchains/clang_full
+export CLANG_PATH=$HOME/Kernel/toolchains/clang
 export PATH=${CLANG_PATH}/bin:${PATH}
 export CLANG_TRIPLE=aarch64-linux-gnu-
 # arch平台，这里是arm64
@@ -56,10 +56,11 @@ export DEF_ARGS="O=${OUT} \
             CROSS_COMPILE=aarch64-linux-gnu- \
             CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
             LLVM=1 \
+            LLVM_IAS=1 \
             LD=ld.lld "
 export BUILD_ARGS="-j${TH_COUNT} ${DEF_ARGS}"
 
-# make menuconfig CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LLVM=1 LD=ld.lld
+# make menuconfig CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- LLVM=1 LLVM_IAS=1 LD=ld.lld
 
 echo -e "${cwarn}内核工作目录 ==> ${KERNEL_DIR}"
 echo -e "内核 defconfig 文件 ==> ${KERNEL_DEFCONFIG}"
