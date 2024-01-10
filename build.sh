@@ -26,7 +26,7 @@ export KERNEL_ZIP_NAME="munch_kernel.zip"
 # 刷机包打包完成后移动目录
 export KERNEL_ZIP_EXPORT=$HOME/Kernel
 # 设置 clang 绝对路径
-export CLANG_PATH=$HOME/Kernel/toolchains/clang
+export CLANG_PATH=$HOME/Kernel/toolchains/neutron-clang
 export PATH=${CLANG_PATH}/bin:${PATH}
 export CLANG_TRIPLE=aarch64-linux-gnu-
 # arch平台，这里是arm64
